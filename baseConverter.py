@@ -2,7 +2,7 @@ class BaseConverter:
     def __init__(self, converters):
         self.converters = converters
 
-    def __convert(self, fromUnit, amount, toUnit, converterName):
+    def convert(self, fromUnit, amount, toUnit, converterName):
 
         neededConverter = self.converters[converterName]
 
