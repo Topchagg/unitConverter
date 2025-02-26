@@ -18,13 +18,13 @@ class BaseConverter:
             print("No such converter")
             return False
 
-        fromUnit = input("Enter from what unit you want to convert: ")
+        fromUnit = input(f"Enter from what unit you want to convert {list(self.converters[converterName].keys())}:")
 
         if fromUnit not in self.converters[converterName]:
             print("No such unit")
             return False
 
-        toUnit = input("Enter to what unit you want to convert: ")
+        toUnit = input(f"Enter to what unit you want to convert {list(self.converters[converterName].keys())}:")
 
         if toUnit not in self.converters[converterName]:
             print("No such unit")
