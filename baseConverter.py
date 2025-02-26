@@ -4,15 +4,8 @@ class BaseConverter:
 
     def __convert(self, fromUnit, amount, toUnit, converterName):
 
-        if converterName not in self.converters:
-            print("No such converter")
-            return False
 
         neededConverter = self.converters[converterName]
-
-        if fromUnit not in neededConverter or toUnit not in neededConverter:
-            print("No such units")
-            return False
 
         value_in_base = amount / neededConverter[fromUnit]
 
